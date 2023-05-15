@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100vh;
+}
+
+.content{
+    font-size: 5rem;
+    font-weight: 700;
+    color: rgba(80, 8, 48, 0.8);
+}
+
+.btn{
+    border: 2px solid rgba(0, 0, 0, 0.9);
+    font-size: 1.3rem;
+    font-weight: lighter;
+    background-color: white;
+    letter-spacing: 2px;
+    padding: 0.2rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+    margin-left: 16px;
+}
+
+.btn:hover{
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    
+}
