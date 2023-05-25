@@ -3,21 +3,35 @@ var increment = document.querySelector('.incrementbtn')
 var decrement = document.querySelector('.decrementbtn')
 var reset = document.querySelector('.resetbtn')
 
-
+let numCounter = 0;
 
 increment.addEventListener('click', () => {
-    counter.textContent = +counter.textContent + 1
+    counter.innerHTML = ++numCounter
+    colorChanger()
 })
 
 decrement.addEventListener('click', () => {
-    counter.textContent = +counter.textContent - 1
+    counter.innerHTML = --numCounter
+    colorChanger()
 })
 
 reset.addEventListener('click', () => {
-    counter.textContent = 0
+    numCounter = 0;
+    counter.innerHTML = numCounter;
+    colorChanger()
 })
 
 
-if(counter.textContent > 0){
-    counter.style.color = "green";
+function colorChanger() {
+    if (numCounter > 0) {
+        counter.style.color = "green";
+} 
+    else if (numCounter < 0) {
+        counter.style.color = "red";
+} 
+    else {
+        counter.style.color = "rgba(80, 8, 48, 0.8)"; 
 }
+}
+
+
